@@ -1,0 +1,148 @@
+.Menu {
+  height: 98vh;
+  width: 130px;
+  padding: 20px;
+  background-color: var(--azul-intermediário);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Menu .logo {
+  margin-bottom: 100px;
+}
+
+.Menu .logo img {
+  width: 100px;
+}
+
+.icon {
+  height: 25px;
+  width: 25px;
+}
+
+.Menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.menuItem {
+  color: var(--cinza);
+  
+  padding: 5px;
+  border-radius: 5px;
+  margin: 25px 0;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  list-style-type: none;
+
+  transition: background-color 0.3s ease;
+
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background-color: var(--azul-escuro);
+  transition: background-color 0.3s ease;
+}
+
+.menuItem.active {
+  color: var(--branco);
+  background-color: var(--azul-escuro);
+
+  transition: background-color 0.3s ease;
+
+  border-radius: 5px;
+}
+
+.Menu li span {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.Menu .linha {
+  height: 2px;
+  background-color: var(--cinza);
+  width: 100%;
+  margin: 30px 0;
+}
+
+.menuUser {
+  position: absolute;
+  top: 0px;
+  min-width: 120px;
+  left: 125px;
+  background-color: var(--azul-escuro);
+  border-radius: 5px;
+
+  list-style-type: none;
+  display: none;
+  z-index: 10;
+}
+
+.menuUser li {
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--branco);
+  margin: 0;
+}
+
+.menuUser li a {
+  justify-content: center;
+  color: var(--branco);
+  text-decoration: none;
+}
+
+.menuUser li:last-child {
+  border-bottom: none;
+}
+
+.menuUser.visible {
+  display: block;
+}
+
+.menuUser li:hover {
+  background-color: var(--branco);
+  transition: background-color 0.3s ease;
+}
+
+.menuUser li:hover a {
+  color: var(--azul-intermediário);
+  transition: color 0.3s ease;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+.profile li {
+  list-style-type: none;
+  padding: 10px;
+
+  color: var(--branco);
+  background-color: var(--cinza);
+
+  border-radius: 50%;
+}
+
+.profile li:hover {
+  color: var(--azul-intermediário);
+  background-color: var(--branco);
+  transition: background-color 0.3s ease;
+}
+
+.profile .menuItem.active {
+  color: var(--azul-intermediário);
+  background-color: var(--branco);
+
+  transition: background-color 0.3s ease;
+
+  border-radius: 50%;
+}
