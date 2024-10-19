@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function Login() {
     const [showPassword, setShowPassword] = useState(false);
-    const router = useRouter(); // Usando o hook useRouter
+    const router = useRouter();
 
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
@@ -22,7 +22,7 @@ export default function Login() {
     };
 
     return (
-        <div className={styles.container_login}>
+        <div>
             <h2>Bem vindo</h2>
 
             <form onSubmit={handleLogin}>

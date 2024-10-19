@@ -18,11 +18,11 @@ export default function TelaLogin() {
           <Login />
         </div>
       </div>
-      <footer className={styles.footer}>
+      {/* <footer className={styles.footer}>
         <p>
-          Ao continuar, voc  concorda com os <a href="/termos-de-uso" className={styles.link}>Termos de Serviço</a> e <a href="/politica-de-privacidade" className={styles.link}>Politica de Privacidade</a> do Schoolify.
+          Ao continuar, você concorda com os <a href="/termos-de-uso" className={styles.link}>Termos de Serviço</a> e <a href="/politica-de-privacidade" className={styles.link}>Política de Privacidade</a> do Schoolify.
         </p>
-      </footer>
+      </footer> */}
     </div>
   );
 }
