@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-export default function Login() {
+export default function Login({ onRecoverPassword }) { 
+  
     const [showPassword, setShowPassword] = useState(false);
     const router = useRouter();
 
@@ -17,7 +18,6 @@ export default function Login() {
         e.preventDefault();
 
         // Lógica de login (validação, autenticação, etc.)
-        
         router.push("/");
     };
 
@@ -51,7 +51,9 @@ export default function Login() {
                             <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
                         </span>
                     </div>
-                    <div className={styles.recuperar_senha}><a href="#">Esqueceu a senha?</a></div>
+                    <div className={styles.link_Recuperar}>
+                        <a href="#" onClick={onRecoverPassword}>Esqueceu a senha?</a>
+                    </div>
                 </div>
 
                 <Botao className={styles.botao_login} type="submit">
