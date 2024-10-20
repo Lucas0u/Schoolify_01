@@ -64,7 +64,7 @@ export default function Menu() {
       </ul>
 
       <div className={styles.linha}></div>
-      
+
       {/* MENU ADM */}
       <ul>
         <li onClick={() => handleIconClick('RegistrarAtividades', '/registrar_atividades')} className={getLiClass('RegistrarAtividades')}>
@@ -92,14 +92,13 @@ export default function Menu() {
             <li onClick={() => router.push('/livros')}>Livros</li>
           </ul>
         </li>
+        {/* PERFIL E CONFIG */}
+        <div className={styles.profile}>
+          <li onClick={handleProfileClick} className={getLiClass('perfil')}>
+            <FontAwesomeIcon icon={farUser} className={styles.icon} />
+          </li>
+        </div>
       </ul>
-
-      {/* PERFIL E CONFIG */}
-      <div className={styles.profile}>
-        <li onClick={handleProfileClick} className={getLiClass('perfil')}>
-          <FontAwesomeIcon icon={farUser} className={styles.icon} />
-        </li>
-      </div>
     </nav>
   );
 }
