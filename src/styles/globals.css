@@ -27,6 +27,6 @@ body {
   margin-left: 130px;
   padding: 50px;
 
-  background-color: #F5F5F5;
+  background-color: var(--branco);
   border-radius: 25px;
 }

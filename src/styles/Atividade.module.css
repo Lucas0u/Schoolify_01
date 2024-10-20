@@ -1,0 +1,154 @@
+.Container_Atividade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--branco);
+
+  width: 100%;
+  height: 550px;
+
+  padding: 20px;
+  border-radius: 15px;
+  background-color: var(--azul-intermediário);
+}
+
+.conteudo_atv h1 {
+  margin-bottom: 10px;
+
+  text-align: center;
+}
+
+
+.AtvAberta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+
+  max-width: 800px;
+  max-height: 450px;
+  
+  border: 1px solid rgba(202, 177, 144, 1);
+  border: 10px solid var(--azul-escuro);
+  border-radius: 15px;
+
+  background-color: rgba(241, 219, 188, 1);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.AtvAberta h2 {
+  font-size: 36px;
+  width: 100%;
+  text-align: center;
+  color: var(--preto);
+  margin-bottom: 10px;
+  border-bottom: rgba(148, 142, 134, 1) solid 2px;
+}
+
+.AtvAberta p {
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: justify;
+  color: var(--preto);
+}
+
+.descricao {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  
+  max-width: 800px;
+
+  margin-top: 10px;
+}
+
+
+.seta_esquerda, .seta_direita {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--branco);
+  background-color: var(--azul-escuro);
+  
+  border-radius: 50%;
+  border: none;
+  /* padding: 5px; */
+
+  width: 20px;
+  height: 20px;
+  
+  
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.voltar {
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+
+  border: none;
+  
+  padding: 0px 20px;
+  font-size: 16px;
+  
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.seta_esquerda:disabled, .seta_direita:disabled {
+
+  cursor: not-allowed;
+}
+
+
+
+.seta_esquerda.disabled, .seta_direita.disabled {
+  opacity: 0.5;
+  background-color: var(--preto);
+  cursor: not-allowed;
+  color: var(--branco); 
+}
+
+
+/* .seta_esquerda:hover:not(:disabled), .seta_direita:hover:not(:disabled) {
+  color: var(--azul-intermediário);
+} */
+
+/* .seta_esquerda:not(:disabled):hover, .seta_direita:not(:disabled):hover {
+  background-color: var(--branco);
+} */
+
+
+
+/* CSS - Seção comentários */
+
+.Container_Comentarios {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+
+  color: var(--branco);
+
+  width: 100%;
+  height: fit-content;
+
+  padding: 20px;
+  border-radius: 15px;
+
+  background-color: var(--azul-intermediário);
+}
+
+
