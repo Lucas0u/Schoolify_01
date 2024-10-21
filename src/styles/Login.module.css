@@ -3,7 +3,7 @@
 .tela_login {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  /* height: 100vh; */
   
   align-items: center;
 }
@@ -54,7 +54,7 @@
   height: 98vh;
 
   padding: 40px;
-  margin: 10px;
+  margin: 7px;
 
   background-color: #F5F5F5;
   border-radius: 25px;
