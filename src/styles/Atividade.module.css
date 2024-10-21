@@ -5,7 +5,7 @@
   color: var(--branco);
 
   width: 100%;
-  height: 100%;	
+  height: 600px;	
 
   margin: 0 auto;
 
@@ -27,10 +27,9 @@
 
   padding: 10px;
 
-  width: 100%;
-  max-width: 850px;
+  width: 850px;
 
-  height: 100%;
+  height: 400px;
 
   border: 10px solid var(--azul-escuro);
   border-radius: 15px;
@@ -52,7 +51,7 @@
 }
 
 .AtvAberta p {
-  font-size: 12px;
+  font-size: 16px;
   width: 100%;
   
   margin-bottom: 5px;
@@ -61,21 +60,13 @@
   
 }
 
-.descricao {
-  /* flex-grow: 1; */
-  width: 100%;
-  overflow-y: auto;
-}
-
-
-.nav_container {
+.AtvAberta .nav_container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  
-  max-width: 800px;
+  align-items: end;
 
-  margin-top: 10px;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -117,23 +108,12 @@
   cursor: not-allowed;
 }
 
-
-
 .seta_esquerda.disabled, .seta_direita.disabled {
   opacity: 0.5;
   background-color: var(--preto);
   cursor: not-allowed;
   color: var(--branco); 
 }
-
-
-/* .seta_esquerda:hover:not(:disabled), .seta_direita:hover:not(:disabled) {
-  color: var(--azul-intermediário);
-} */
-
-/* .seta_esquerda:not(:disabled):hover, .seta_direita:not(:disabled):hover {
-  background-color: var(--branco);
-} */
 
 
 
