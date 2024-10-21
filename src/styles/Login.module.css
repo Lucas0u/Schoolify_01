@@ -63,7 +63,7 @@
 .container_login h2 {
   text-align: center;
 
-  font-size: 62px;
+  font-size: 2.5rem;
   font-family: Rowdies, sans-serif;
   font-weight: 700;
 
@@ -166,17 +166,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  padding: 20px;
 }
 
 .recuperar_senha img {
-  height: auto;
-  margin-bottom: 30px;
+  height: 100px;
 }
 
 .recuperar_senha h2 {
   font-size: 24px;
   color: var(--preto);
-  margin-bottom: 60px;
+
+  margin-bottom: 50px;
 }
 
 .recuperar_senha p {
@@ -185,16 +189,16 @@
   
   width: 100%;
   color: var(--preto);
-  margin-bottom: 30px;
 }
 
 .recuperar_senha .linha {
   width: 100%;
   height: 2px;
 
+  margin: 20px 0;
+
   background-color: var(--cinza);
   
-  margin-bottom: 50px;
 }
 
 .botao_recuperar {
@@ -209,7 +213,6 @@
   border-radius: 25px;
 
   font-size: 20px;
-  margin-top: 30px;
 
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -222,8 +225,11 @@
 .botao_voltar {
   font-size: 14px;
   padding: 5px;
+
+  margin-top: 50px;
   
-  max-width: 22%;
+  width: 100%;
+  max-width: 120px;
   height: 20%;
 
   background-color: rgba(0, 105, 114, 1);
@@ -232,5 +238,5 @@
   border: none;
   border-radius: 25px;
 
-  margin-top: 30%;
+  cursor: pointer;
 }

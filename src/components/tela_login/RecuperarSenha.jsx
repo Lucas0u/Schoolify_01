@@ -23,7 +23,7 @@ export default function RecuperarSenha({ onBackToLogin }) {
           />
         </div>
         
-        <Botao className={styles.botao_recuperar} type="submit">Recuperar Senha</Botao>
+        <Botao className={styles.botao_recuperar} type="submit">Enviar Link</Botao>
         
         <Botao className={styles.botao_voltar} onClick={onBackToLogin}>Voltar ao Login</Botao>
       </form>  

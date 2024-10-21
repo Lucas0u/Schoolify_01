@@ -88,7 +88,7 @@ export default function Menu() {
           <span>Pastas</span>
           <ul className={`${styles.menuUser} ${showPastaMenu ? styles.visible : ''}`}>
             <li onClick={() => router.push('/turma')}>Turma</li>
-            <li onClick={() => router.push('/disciplina')}>Disciplina</li>
+            <li onClick={() => router.push('/disciplinas')}>Disciplina</li>
             <li onClick={() => router.push('/livros')}>Livros</li>
           </ul>
         </li>

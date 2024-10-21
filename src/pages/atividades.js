@@ -1,20 +1,21 @@
+import Atividade from "@/components/atividades/Atividade";
 import Botao from "@/components/botoes/Botao";
 import Menu from "@/components/menu/Menu";
 import styles from "@/styles/Atividade.module.css";
-import { useRouter } from "next/router"; // Importando o Router do Next.js
+import { useRouter } from "next/router";
 
 export default function Atividades() {
-  const router = useRouter(); // Criando uma instância do Router
+  const router = useRouter(); 
 
   const handleAbrirAtividade = () => {
-    router.push("/atividades_abertas"); // Navegação programática
+    router.push("/atividades_abertas"); 
   };
 
   return (
     <>
       <Menu />
       <div className="container_tela">
-        <h1>Atividades</h1>
+        <Atividade/>
         <Botao className={styles.botao_atividade} onClick={handleAbrirAtividade}>
           Abrir Atividade
         </Botao>
