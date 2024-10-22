@@ -1,4 +1,3 @@
-import Atividade from "@/components/atividades/Atividade";
 import Botao from "@/components/botoes/Botao";
 import Menu from "@/components/menu/Menu";
 import styles from "@/styles/Atividade.module.css";
@@ -15,7 +14,6 @@ export default function Atividades() {
     <>
       <Menu />
       <div className="container_tela">
-        <Atividade/>
         <Botao className={styles.botao_atividade} onClick={handleAbrirAtividade}>
           Abrir Atividade
         </Botao>

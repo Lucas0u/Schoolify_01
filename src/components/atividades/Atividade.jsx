@@ -66,4 +66,4 @@ const CreateDisciplina = () => {
   );
 };
 
-export default CreateDisciplina;
+export default CriarDisciplina;

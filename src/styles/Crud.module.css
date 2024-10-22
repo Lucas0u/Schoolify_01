@@ -7,37 +7,38 @@
   width: 100%;
   height: 100%;
 
-  background-color: var(--azul-escuro);
   color: var(--branco);
 }
 
 .formContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  /* justify-content: center;   */
+  align-items: center; 
 
   background-color: var(--azul-intermediário);
   color: var(--branco);
   
-  width: 350px;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 25%;
+
   height: 100%;
-  max-height: 900px;
+  
   padding: 20px;
 
   border-radius: 15px;
 }
 
 .formContainer .icon {
-  width: 90px;
-  height: 90px;
+  width: 5rem;
+  height: 5rem;
   
   margin-top: 60px;
 }
 
 .formContainer h1 {
-  margin-bottom: 60px;
+  font-size: 1.5rem;
+  padding: 5px;
+  margin-bottom: 50px;
 }
 
 .formContainer form {
@@ -49,6 +50,7 @@
   height: 100%;
 
   gap: 20px;
+  margin: 20px 0;
 }
 
 .formContainer .inputGroup {
@@ -62,7 +64,7 @@
 
 .formContainer .inputGroup input {
   width: 100%;
-  height: 35px;
+  height: 30px;
   padding: 10px;
 
   border: solid 1px rgba(29, 29, 29, 0.5);
@@ -72,7 +74,7 @@
 }
 
 .formContainer .inputGroup label {
-  font-size: 18px;
+  font-size: 14px;
   width: 100%;
 }
 
@@ -88,10 +90,11 @@
 
 .botaoRegisto {
   width: 100%;
-  max-width: 200px;
-  height: 40px;
+  max-width: 150px;
 
-  font-size: 20px;
+  height: 25px;
+
+  font-size: 1rem;
   margin: 30px 0;
 
   background-color: var(--azul-escuro);
@@ -103,3 +106,116 @@
   cursor: pointer;
 }
 
+/* CSS - Lista */
+
+.lista_Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 70%;
+  
+  height: 100%;
+  padding: 30px;
+
+  background-color: var(--azul-intermediário);
+  border-radius: 15px;
+
+  color: var(--preto);
+
+  overflow: auto;
+}
+
+.lista_Container h1 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  
+  color: var(--branco);
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+
+  gap: 20px;
+
+  width: 100%;
+  min-width: 650px;
+
+  height: 50px;
+
+  padding: 20px;
+
+  background-color: var(--branco);
+  border-radius: 5px;
+}
+
+.listItem p {
+  font-size: 14px;
+  width: 100%;
+}
+
+.listItem img {
+  width: 100%;
+  max-width: 50px;
+  height: 40px;
+
+  margin-right: 150px;
+  
+  border-radius: 10px;
+}
+
+.listItem button {
+  background-color: #f44336;
+  color: white;
+
+  padding: 10px;
+  border: none;
+
+  border-radius: 100%;
+  padding: 10px;
+  cursor: pointer;
+  
+  font-size: 10px;
+}
+
+.listItem .botaoDeletar {
+  background-color: rgba(209, 35, 35, 1);
+
+}
+
+.listItem .botaoDeletar:hover {
+  background-color: rgba(209, 35, 35, 0.8);
+}
+
+.listItem .botaoEditar {
+  background-color: rgba(0, 34, 172, 1);
+}
+
+.success {
+  background-color: rgba(0, 204, 85, 1);
+  color: var(--branco);
+
+  border-radius: 10px;
+
+  padding: 10px;
+  
+  font-size: 0.9rem;
+  margin-top: 50px;
+}
+
+.error {
+  background-color: #f44336;
+  color: var(--branco);
+
+  border-radius: 10px;
+
+  padding: 10px;
+  
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
