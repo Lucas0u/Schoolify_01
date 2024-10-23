@@ -17,6 +17,10 @@ export default function Login({ onRecoverPassword }) {
     const handleLogin = (e) => {
         e.preventDefault();
 
+        // async function login() {
+        //    users = await api.get('/usuarios');
+        // }
+
         // Lógica de login (validação, autenticação, etc.)
         router.push("/");
     };

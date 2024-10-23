@@ -1,6 +1,5 @@
-import Botao from "@/components/botoes/Botao";
+import Atividade from "@/components/atividades/Atividade";
 import Menu from "@/components/menu/Menu";
-import styles from "@/styles/Atividade.module.css";
 import { useRouter } from "next/router";
 
 export default function Atividades() {
@@ -10,13 +9,15 @@ export default function Atividades() {
     router.push("/atividades_abertas"); 
   };
 
+
   return (
     <>
       <Menu />
       <div className="container_tela">
-        <Botao className={styles.botao_atividade} onClick={handleAbrirAtividade}>
+        <Atividade />
+        {/* <Botao className={styles.botao_atividade} onClick={handleAbrirAtividade}>
           Abrir Atividade
-        </Botao>
+        </Botao> */}
       </div>
     </>
   );

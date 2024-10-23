@@ -1,5 +1,4 @@
 import AtvAberta from "@/components/atividades/AtvAberta";
-import Comments from "@/components/comentarios_chat/Comments";
 import Menu from "@/components/menu/Menu";
 import styles from '@/styles/Atividade.module.css';
 import { useRouter } from 'next/router';
@@ -9,7 +8,7 @@ export default function AtividadeAbertas() {
   const router = useRouter();
 
   const atividades = [
-    {
+    { id:2,
       titulo: "História",
       turma: "4° - A",
       dataInicio: "01/10/2024",
@@ -27,7 +26,7 @@ export default function AtividadeAbertas() {
 
       Livro: "Impacto da Revolução Francesa na Política Moderna"`,
     },
-    {
+    { id: 2,
       titulo: "História",
       turma: "4° - A",
       dataInicio: "05/10/2024",
@@ -72,7 +71,6 @@ export default function AtividadeAbertas() {
             onBack={handleBack}
           />
         </div>
-        <Comments />
       </div>
     </>
   );

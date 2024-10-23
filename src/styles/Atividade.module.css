@@ -1,3 +1,101 @@
+.livroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  
+  padding: 50px;
+
+  background-color: var(--azul-intermediário);
+  border-radius: 15px;
+
+  color: var(--branco);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.livroContainer h1 {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+
+  border-bottom: 3px solid var(--azul-escuro);
+}
+
+.livro {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.capaLivro {
+  width: 10rem;
+  height: 14rem;
+  margin: 20px;
+  
+  background-color: var(--azul-escuro);
+
+  display: flex;
+
+  border-radius: 5px;
+  
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.capaLivro:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.capaLivro .linha {
+  height: 100%;
+  padding: 2px;
+  margin-left: 7px;
+  
+  background-color: rgb(0, 73, 80);
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 10px;
+  margin-top: 40px;
+
+  width: 100%;
+  height: 100%;
+}
+
+.conteudo img {
+  width: 100%;
+  height: 28%;
+  
+  border-radius: 5px;
+
+  margin-bottom: 25px;
+}
+
+.conteudo h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+
+  text-align: center;
+}
+
+
+
+
+
+/* CSS - Atividade Aberta */
+
 .Container_Atividade {
   display: flex;
   flex-direction: column;
@@ -95,7 +193,7 @@
 
   border: none;
   
-  padding: 0px 20px;
+  padding: 5px 20px;
   font-size: 16px;
   
   border-radius: 5px;
@@ -112,27 +210,6 @@
   background-color: var(--preto);
   cursor: not-allowed;
   color: var(--branco); 
-}
-
-
-
-/* CSS - Seção comentários */
-
-.Container_Comentarios {  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px 0;
-
-  color: var(--branco);
-
-  width: 100%;
-  height: 200px;
-
-  padding: 20px;
-  border-radius: 15px;
-
-  background-color: var(--azul-intermediário);
 }
 
 

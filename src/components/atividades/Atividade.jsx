@@ -1,69 +1,71 @@
-import styles from "@/styles/Atividade.module.css";
-import { useState } from "react";
+import styles from '@/styles/Atividade.module.css';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
-const CreateDisciplina = () => {
-  const [nome, setNome] = useState("");
-  const [imgUrl, setImgUrl] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+const Atividade = () => {
+  const router = useRouter();
+  const [disciplinas, setDisciplinas] = useState([]); // Inicializa como um array vazio
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const fetchDisciplinas = () => {
+    setDisciplinas([
+      {
+        id: 1,
+        nome: 'Matemática',
+        imgUrl: 'https://static.vecteezy.com/ti/vetor-gratis/p1/20277225-matematica-rabisco-definir-educacao-e-estude-conceito-escola-equipamento-matematicas-formulas-dentro-esboco-estilo-mao-desenhado-ector-ilustracao-isolado-em-branco-fundo-vetor.jpg',
+      },
+      {
+        id: 2,
+        nome: 'História',
+        imgUrl: 'https://static.vecteezy.com/system/resources/thumbnails/002/236/242/small_2x/history-minimal-thin-line-icons-set-vector.jpg',
+      },
+      {
+        id: 3,
+        nome: 'Matemática',
+        imgUrl: 'https://static.vecteezy.com/ti/vetor-gratis/p1/20277225-matematica-rabisco-definir-educacao-e-estude-conceito-escola-equipamento-matematicas-formulas-dentro-esboco-estilo-mao-desenhado-ector-ilustracao-isolado-em-branco-fundo-vetor.jpg',
+      },
+      {
+        id: 4,
+        nome: 'História',
+        imgUrl: 'https://static.vecteezy.com/system/resources/thumbnails/002/236/242/small_2x/history-minimal-thin-line-icons-set-vector.jpg',
+      },
+      {
+        id: 5,
+        nome: 'Matemática',
+        imgUrl: 'https://static.vecteezy.com/ti/vetor-gratis/p1/20277225-matematica-rabisco-definir-educacao-e-estude-conceito-escola-equipamento-matematicas-formulas-dentro-esboco-estilo-mao-desenhado-ector-ilustracao-isolado-em-branco-fundo-vetor.jpg',
+      },
+    ]);
+  };
 
-    try {
-      const response = await fetch("url-da-sua-api/disciplinas", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ nome, imgUrl }),
-      });
+  useEffect(() => {
+    fetchDisciplinas(); // Chama a função para definir as disciplinas
+  }, []); // O array vazio significa que isso será chamado apenas uma vez após a montagem do componente
 
-      if (!response.ok) {
-        throw new Error("Erro ao criar disciplina");
-      }
-
-      const data = await response.json();
-      setSuccessMessage(`Disciplina criada com sucesso: ${data.nome}`);
-      setNome("");
-      setImgUrl("");
-    } catch (error) {
-      setErrorMessage(error.message);
-    }
+  const handleClick = (id) => {
+    router.push(`/atividades_abertas`); 
+    // router.push(`/atividades_abertas/${id}`); // Adiciona o ID da disciplina
   };
 
   return (
-    <div className={styles.container}>
-      <h1>Criar Disciplina</h1>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <div className={styles.inputGroup}>
-          <label htmlFor="nome">Nome da Disciplina:</label>
-          <input
-            type="text"
-            id="nome"
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-            required
-          />
-        </div>
-        <div className={styles.inputGroup}>
-          <label htmlFor="imgUrl">URL da Imagem:</label>
-          <input
-            type="text"
-            id="imgUrl"
-            value={imgUrl}
-            onChange={(e) => setImgUrl(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit" className={styles.submitButton}>
-          Criar Disciplina
-        </button>
-      </form>
-      {successMessage && <p className={styles.success}>{successMessage}</p>}
-      {errorMessage && <p className={styles.error}>{errorMessage}</p>}
+    <div className={styles.livroContainer}>
+      <h1>Atividades</h1>
+      <div className={styles.livro}>
+        {disciplinas.length > 0 ? (
+          disciplinas.map((disciplina) => (
+            <div key={disciplina.id} className={styles.capaLivro} onClick={() => handleClick(disciplina.id)}>
+              <div className={styles.linha}></div>
+              <div className={styles.conteudo}>
+                <img src={disciplina.imgUrl} alt={disciplina.nome} className={styles.capaImagem} />
+                <h2>{disciplina.nome}</h2>
+              </div>
+            </div>
+          ))
+        ) : (
+          <p>Nenhuma disciplina disponível.</p>
+        )}
+      </div>
     </div>
   );
 };
 
-export default CriarDisciplina;
+export default Atividade;
+
