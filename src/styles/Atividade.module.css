@@ -38,6 +38,7 @@
 .capaLivro {
   width: 10rem;
   height: 14rem;
+
   margin: 20px;
   
   background-color: var(--azul-escuro);

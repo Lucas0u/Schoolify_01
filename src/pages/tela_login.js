@@ -34,7 +34,11 @@ export default function TelaLogin() {
           )}
         </div>
       </div>
-      {/* Footer aqui, se necessário */}
+      <footer className={styles.footer}>
+        <p>
+          Ao continuar, você concorda com os <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a> do Schoolify.
+        </p>
+      </footer>
     </div>
   );
 }

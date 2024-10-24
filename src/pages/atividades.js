@@ -15,9 +15,6 @@ export default function Atividades() {
       <Menu />
       <div className="container_tela">
         <Atividade />
-        {/* <Botao className={styles.botao_atividade} onClick={handleAbrirAtividade}>
-          Abrir Atividade
-        </Botao> */}
       </div>
     </>
   );

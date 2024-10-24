@@ -5,7 +5,7 @@ export default function Home() {
     <>
       <Menu />
       <div className="container_tela">
-        <h1>Home</h1>
+        <h1>INDEX MUDAR PARA TELA LOGIN</h1>
       </div>
     </>
   );

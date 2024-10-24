@@ -1,0 +1,138 @@
+.containerTela {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 100%;
+
+  gap: 30px;
+}
+
+/* CSS - Saudação + Atividades recentes */
+
+.acontainerAtv {
+  width: 40%;
+  height: 100%;
+  
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+
+  background-color: var(--azul-intermediário);
+  color: var(--branco);
+  border-radius: 15px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.saudacao h2 {
+  font-size: 1.8rem;
+
+}
+
+.saudacao .nome {
+  font-weight: 300;
+
+}
+
+.saudacao p {
+  font-size: 0.7rem;
+}
+
+/* CSS - Atividades recentes */
+
+.atividadesRecentes {
+  width: 100%;
+  height: 100%;
+
+  margin-top: 100px;
+
+  padding: 20px;
+  
+  display: flex;
+  flex-direction: column;
+
+}
+
+.atividadesRecentes h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.atividadesRecentes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.atividadesRecentes .cardsContainer {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+
+  width: 100%;
+  /* height: 100%; */
+
+  background-color: var(--azul-escuro);
+  border-radius: 15px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.atividadesRecentes .cardsContainer .imgCard {
+  width: 50px;
+  height: 50px;
+  
+  border-radius: 50%;
+}
+
+.cardsContainer .cardContent {
+  font-size: 0.8rem;
+}
+
+
+
+/* CSS - Container direita + proximos eventos e sugestoes de livros */
+
+.containersDireita {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 30px;
+}
+
+.proximosEventos,
+.sugestoesLivros {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+  
+
+  background-color: var(--azul-intermediário);
+  color: var(--branco);
+  border-radius: 15px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+

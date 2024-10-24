@@ -31,7 +31,7 @@ export default function Menu() {
   };
 
   const handleProfileClick = () => {
-    router.push('/pagina_config');
+    router.push('/perfil_config');
   };
 
   const getLiClass = (icon) => `${styles.menuItem} ${activeIcon === icon ? styles.active : ''}`;
