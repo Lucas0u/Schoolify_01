@@ -1,12 +1,13 @@
 import styles from "@/styles/Home.module.css";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Botao from "../botoes/Botao";
 
 export default function AtvRecentes() {
-
   const router = useRouter();
-  const [cards, setCards] = useState([]); 
+  const [cards, setCards] = useState([]);
 
   const getNome = () => "Geovana";
 
@@ -19,10 +20,9 @@ export default function AtvRecentes() {
     }]);
   };
 
-  // Use useEffect to fetch cards when the component mounts
   useEffect(() => {
     fetchCards();
-  }, []); // Empty dependency array ensures this runs only once when the component mounts
+  }, []);
 
   return (
     <div className={styles.acontainerAtv}>
@@ -51,10 +51,12 @@ export default function AtvRecentes() {
               </div>
             </div>
           ))}
+          <Botao className={styles.botaoAtv} onClick={() => { router.push('/atividades_abertas'); }} type="button">
+            Ir para Atividade <FontAwesomeIcon icon={faChevronRight} />
+          </Botao>
         </div>
-
-        <Botao className={styles.botaoAtv} onClick={() => { }} type="button">Ir para Atividade</Botao>
       </div>
     </div>
   );
 }
+
