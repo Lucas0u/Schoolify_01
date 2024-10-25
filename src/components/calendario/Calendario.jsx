@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import styles from "@/styles/Calendario.module.css";
+import styles from '@/styles/Calendario.module.css';
 
 export default function Calendario({tamanho}){
     

@@ -1,4 +1,5 @@
 import AtvAberta from "@/components/atividades/AtvAberta";
+import Comentarios from "@/components/atividades/comentarios";
 import Menu from "@/components/menu/Menu";
 import styles from '@/styles/Atividade.module.css';
 import { useRouter } from 'next/router';
@@ -71,6 +72,7 @@ export default function AtividadeAbertas() {
             onBack={handleBack}
           />
         </div>
+        <Comentarios/>
       </div>
     </>
   );

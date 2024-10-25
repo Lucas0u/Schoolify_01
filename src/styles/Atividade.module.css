@@ -146,6 +146,7 @@
   color: var(--preto);
 
   margin-bottom: 10px;
+
   border-bottom: rgba(148, 142, 134, 1) solid 2px;
 }
 
@@ -214,3 +215,68 @@
 }
 
 
+/* COMENTÁRIOS - ATIVIDADE ABERTA */
+
+.containerComentario{
+  margin-top: 2%;
+
+  width: 100%;
+  height: 25vh;
+  /* height: 100%; */
+
+  background-color: var(--azul-intermediário);
+  color: var(--branco);
+
+  border-radius: 15px;
+
+}
+
+.containerComentario h2{
+  text-align: center;
+
+  padding-top: 20px;
+}
+
+.containerForm form{
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items:center;
+
+  padding: 20px 0px 20px 0px;
+}
+
+.containerForm textarea{
+  width: 85%;
+  height: 6vh;
+
+  border: none;
+  outline: none;
+  resize: none;
+
+  font-size: 15px;
+
+  padding: 10px 10px;
+  
+}
+
+.botaoComentario{
+  width: 5%;
+  height: 6vh;
+
+  border: none;
+
+  background-color: var(--azul-escuro);
+  color: var(--branco);
+
+  font-size: 15px;
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+.botaoComentario:hover{
+  background-color: var(--azul-claro);
+}

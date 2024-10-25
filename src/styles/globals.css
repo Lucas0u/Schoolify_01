@@ -3,6 +3,7 @@
 :root {
   --azul-intermediário: rgba(0, 144, 157, 1);
   --azul-escuro: rgba(0, 104, 114, 0.877);
+  --azul-claro: rgba(62, 220, 234, 1);
   --branco: rgba(245, 245, 245, 1);
   --preto: rgba(29, 29, 29, 1);
   --cinza: rgba(29, 29, 29, 0.6)
