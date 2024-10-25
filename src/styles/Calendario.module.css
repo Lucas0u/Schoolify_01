@@ -1,16 +1,16 @@
 .calendar {
-    background: rgba(0, 105, 114, 0.5);
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 1%;
+  background: rgba(0, 105, 114, 0.5);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 1%;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #f5f5f5;
 }
 
 /* .header h1{
@@ -19,87 +19,100 @@
 } */
 
 .days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 10px;
 }
 
 .day {
-    font-weight: bold;
-    text-align: center;
-    color: #f5f5f5;
+  font-weight: bold;
+  text-align: center;
+  color: #f5f5f5;
 }
 
 .dateGrid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    margin-top: 10px;
-    color: #f5f5f5;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 10px;
+  color: #f5f5f5;
 }
 
 .date {
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid #ddd;  */
-    box-sizing: border-box;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid #ddd;  */
+  box-sizing: border-box;
 }
 
 .grande .today {
-    background-color: rgb(62, 220, 234);
-    color: white;
-    font-size: 1rem;
-    padding: 5px;
-    border-radius: 0px;
-    margin: auto;
-    width: 70%;
-    height: 80%;
+  background-color: rgb(62, 220, 234);
+  color: white;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 0px;
+  margin: auto;
+  width: 70%;
+  height: 80%;
 }
 
-.buttons{
-    width:50px;
-    height: 50px; 
+.buttons {
+  width: 50px;
+  height: 50px;
 
-    font-size: 15px;
-    font-weight: bold;
+  font-size: 15px;
+  font-weight: bold;
 
-    background-color:rgba(0, 105, 114, 0.5);
-    color: #f5f5f5;
+  background-color: rgba(0, 105, 114, 0.5);
+  color: #f5f5f5;
 
-    border: none;
-    border-radius: 100%;
+  border: none;
+  border-radius: 100%;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.grande{
-    width: 615px;
-    height: 570px
+.grande {
+  width: 615px;
+  height: 570px
 }
 
 
 /*CALENDÁRIO PEQUENO*/
 
-.pequeno{
-    width: 40%;
-    height: auto;
+.pequeno {
+  width: 100%;
+  height: 100%;
 
-    font-size: 10px;
-
-    margin-top: 1%;
+  font-size: 12px;
 }
 
-.pequeno .date{
-    height: 45px;
+.pequeno .header h1 {
+  font-size: 16px;
 }
 
-.pequeno .today{
-    background-color: var(--azul-claro);
-    color: white;
-    padding: 5px;
-    border-radius: 50%;
-    margin: auto;
-    width: 58%;
-    height: 58%;
+.pequeno .buttons {
+  width: 40px;
+  height: 40px;
+}
+
+.pequeno .date {
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.pequeno .today {
+  background-color: rgb(62, 220, 234);
+  color: white;
+
+  /* padding: 5px; */
+  border-radius: 100%;
+  margin: auto;
+
+  width: 50%;
+  height: 100%;
 }
