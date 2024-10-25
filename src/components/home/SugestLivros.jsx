@@ -28,8 +28,10 @@ export default function SeguetoesLivros() {
 
   return (
     <div className={styles.sugestoesLivros}>
-      <h2>Sugestões de Leitura</h2>
-      <p>Essas são as sugestões de leitura da semana, seu filho vai adorar.</p>
+      <div className={styles.titulo}>
+        <h2>Sugestões de Leitura</h2>
+        <p>Essas são as sugestões de leitura da semana, seu filho vai adorar.</p>
+      </div>
 
       <div className={styles.exibirLivro}>
         {livros.map((livro) => (
