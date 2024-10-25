@@ -17,6 +17,11 @@ export default function AtvRecentes() {
       imgUrl: 'https://img.myloview.com.br/posters/ilustracao-matematica-redondo-400-75374335.jpg',
       nome: 'Atividade de Matemática',
       professor: 'Prof. Dominique',
+    }, {
+      id: 2,
+      imgUrl: 'https://img.myloview.com.br/posters/ilustracao-matematica-redondo-400-75374335.jpg',
+      nome: 'Atividade de Historia',
+      professor: 'Prof. Dominique',
     }]);
   };
 
@@ -49,11 +54,12 @@ export default function AtvRecentes() {
                 <h3>{card.nome}</h3>
                 <p>{card.professor}</p>
               </div>
+              <Botao className={styles.botaoAtv} onClick={() => { router.push('/atividades_abertas'); }} type="button">
+                Ir para Atividade <FontAwesomeIcon icon={faChevronRight} />
+              </Botao>
             </div>
           ))}
-          <Botao className={styles.botaoAtv} onClick={() => { router.push('/atividades_abertas'); }} type="button">
-            Ir para Atividade <FontAwesomeIcon icon={faChevronRight} />
-          </Botao>
+
         </div>
       </div>
     </div>
