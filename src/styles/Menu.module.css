@@ -50,13 +50,15 @@
 }
 
 .menuItem:hover {
-  background-color: var(--azul-escuro);
+  color: var(--branco);
+  
   transition: background-color 0.3s ease;
 }
 
 .menuItem.active {
   color: var(--branco);
   background-color: var(--azul-escuro);
+  
   transition: background-color 0.3s ease;
   border-radius: 5px;
 }
@@ -90,13 +92,15 @@
 .menuUser li {
   padding: 5px 10px;
   border-bottom: 1px solid var(--branco);
+  
   margin: 0;
   box-sizing: border-box;
 }
 
-.menuUser li a {
+.menuUser li {
   justify-content: center;
   color: var(--branco);
+  
   text-decoration: none;
   display: block;
   width: 100%;
@@ -119,7 +123,7 @@
   transition: background-color 0.3s ease;
 }
 
-.menuUser li:hover a {
+.menuUser li:hover {
   color: var(--azul-intermediário);
   transition: color 0.3s ease;
 }
@@ -135,7 +139,6 @@
 
   width: 100%;
 }
-
 
 .profile li {
   display: flex;
