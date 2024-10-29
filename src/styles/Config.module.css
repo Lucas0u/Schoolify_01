@@ -320,22 +320,26 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+.inputContainer {
+  position: relative;
+  width: 100%; 
+}
+
 .togglePasswordVisibility {
   position: absolute;
   right: 10px;
   top: 50%;
 
   transform: translateY(-50%);
+  cursor: pointer;
 
   border: none;
   background: transparent;
-  cursor: pointer;
 
   color: rgba(183, 180, 180, 1);
-
-  font-size: 1rem;
+  font-size: 1.2rem;
+  padding: 0;
 }
-
 
 .errorMensage {
   font-size: 0.9rem;
@@ -343,7 +347,7 @@
   
   padding: 5px;
 
-  /* width: 100%; */
+  /* width: 350px; */
   text-align: center;
 
   color: rgba(209, 35, 35, 1);

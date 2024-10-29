@@ -11,7 +11,7 @@ export default function AlterarSenha() {
   const [errorMessage, setErrorMessage] = useState('');
   
   const [showCurrentPassword, setShowCurrentPassword] = useState(false);
-  const [showNewPassword, setShowNewPassword] = useState(false);
+  const [showNewPassword, setShowNewPassword] = useState(false); 
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleSubmit = (e) => {
@@ -29,7 +29,6 @@ export default function AlterarSenha() {
     }
 
     // Aqui você pode adicionar a lógica para enviar a nova senha para o back-end
-    // Exemplo: enviar uma requisição para a API de alteração de senha
 
     console.log('Senha alterada com sucesso!');
     // Resetar campos após sucesso
@@ -42,21 +41,21 @@ export default function AlterarSenha() {
   return (
     <div className={styles.containerAlterarSenha}>
       <h2>Alterar Senha</h2>
-      {errorMessage && <p className={styles.errorMensage}>{errorMessage}</p>} 
+      {errorMessage && <p className={styles.errorMensage}>{errorMessage}</p>}
 
       <form className={styles.formAlterarSenha} onSubmit={handleSubmit}>
         <div className={styles.form_group}>
           <label htmlFor="current-password">Senha Atual</label>
-          <div style={{ position: 'relative', width: '100%' }}>
+          <div className={styles.inputContainer}>
             <input
               type={showCurrentPassword ? 'text' : 'password'}
               id="current-password"
               value={currentPassword}
               onChange={(e) => setCurrentPassword(e.target.value)}
             />
-            <button 
-              type="button" 
-              onClick={() => setShowCurrentPassword(!showCurrentPassword)} 
+            <button
+              type="button"
+              onClick={() => setShowCurrentPassword(!showCurrentPassword)}
               className={styles.togglePasswordVisibility}
             >
               <FontAwesomeIcon icon={showCurrentPassword ? faEyeSlash : faEye} />
@@ -65,16 +64,16 @@ export default function AlterarSenha() {
         </div>
         <div className={styles.form_group}>
           <label htmlFor="password">Nova Senha</label>
-          <div style={{ position: 'relative', width: '100%' }}>
+          <div className={styles.inputContainer}>
             <input
               type={showNewPassword ? 'text' : 'password'}
               id="password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
             />
-            <button 
-              type="button" 
-              onClick={() => setShowNewPassword(!showNewPassword)} 
+            <button
+              type="button"
+              onClick={() => setShowNewPassword(!showNewPassword)}
               className={styles.togglePasswordVisibility}
             >
               <FontAwesomeIcon icon={showNewPassword ? faEyeSlash : faEye} />
@@ -83,16 +82,16 @@ export default function AlterarSenha() {
         </div>
         <div className={styles.form_group}>
           <label htmlFor="confirm-password">Confirmar Senha</label>
-          <div style={{ position: 'relative', width: '100%' }}>
+          <div className={styles.inputContainer}>
             <input
               type={showConfirmPassword ? 'text' : 'password'}
               id="confirm-password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
             />
-            <button 
-              type="button" 
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)} 
+            <button
+              type="button"
+              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               className={styles.togglePasswordVisibility}
             >
               <FontAwesomeIcon icon={showConfirmPassword ? faEyeSlash : faEye} />
