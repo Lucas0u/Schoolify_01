@@ -1,9 +1,11 @@
 import Login from "@/components/tela_login/Login";
 import RecuperarSenha from "@/components/tela_login/RecuperarSenha";
 import styles from "@/styles/Login.module.css";
+import { useRouter } from "next/router";
 import { useState } from "react";
 
 export default function TelaLogin() {
+  const router = useRouter();
   const [isRecoveringPassword, setIsRecoveringPassword] = useState(false);
 
   const handleRecoverPasswordClick = () => {
@@ -12,6 +14,10 @@ export default function TelaLogin() {
 
   const handleBackToLoginClick = () => {
     setIsRecoveringPassword(false);
+  };
+
+  const handleTermosClick = () => {
+    router.push("/tela_termos");
   };
 
   return (
@@ -36,9 +42,11 @@ export default function TelaLogin() {
       </div>
       <footer className={styles.footer}>
         <p>
-          Ao continuar, você concorda com os <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a> do Schoolify.
+          Ao continuar, você concorda com os <a onClick={handleTermosClick}>Termos de Serviço</a> e <a onClick={handleTermosClick}>Política de Privacidade</a> do Schoolify.
         </p>
       </footer>
     </div>
   );
 }
+
+

@@ -261,4 +261,68 @@
 .footer a {
   color: rgba(0, 34, 172, 1);
   text-decoration: none;
+  cursor: pointer;
+}
+
+/* CSS - Termos de Uso e Politica de Privacidade  */
+
+.containerTermos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+  height: 100vh;
+
+  padding: 20px;
+  background-color: var(--branco);
+  color: var(--preto);
+}
+
+.containerTermos .termosHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.termosHeader h2 {
+  text-align: center;
+  width: 100%;
+}
+
+.termosHeader .botao_voltarTermos {
+  height: 40px;
+  width: 80px;
+
+  background-color: var(--azul-intermediário);
+  color: var(--branco);
+
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.termosConteudo {
+  width: 100%;
+  max-width: 800px;
+
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.containerTermos .h2 {
+  margin-bottom: 20px;
+}
+
+.containerTermos .strong {
+  font-weight: bold;
+}
+
+.termosConteudo p {
+  margin-bottom: 20px;
 }
