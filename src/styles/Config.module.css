@@ -320,6 +320,23 @@
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+.togglePasswordVisibility {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  color: rgba(183, 180, 180, 1);
+
+  font-size: 1rem;
+}
+
+
 .errorMensage {
   font-size: 0.9rem;
   margin-top: 20px;
@@ -334,6 +351,7 @@
 
   border-radius: 10px;
 }
+
 
 
 /* CSS - Termos de Uso e Política de Privacidade  */

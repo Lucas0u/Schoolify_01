@@ -1,5 +1,7 @@
 import Botao from '@/components/botoes/Botao';
 import styles from '@/styles/Config.module.css';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 
 export default function AlterarSenha() {
@@ -7,16 +9,20 @@ export default function AlterarSenha() {
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  
+  const [showCurrentPassword, setShowCurrentPassword] = useState(false);
+  const [showNewPassword, setShowNewPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Validações básicas
     if (newPassword !== confirmPassword) {
       setErrorMessage('As senhas não correspondem.');
       return;
     }
-    
+
     if (newPassword.length < 6) {
       setErrorMessage('A nova senha deve ter pelo menos 6 caracteres.');
       return;
@@ -41,30 +47,57 @@ export default function AlterarSenha() {
       <form className={styles.formAlterarSenha} onSubmit={handleSubmit}>
         <div className={styles.form_group}>
           <label htmlFor="current-password">Senha Atual</label>
-          <input
-            type="password"
-            id="current-password"
-            value={currentPassword}
-            onChange={(e) => setCurrentPassword(e.target.value)}
-          />
+          <div style={{ position: 'relative', width: '100%' }}>
+            <input
+              type={showCurrentPassword ? 'text' : 'password'}
+              id="current-password"
+              value={currentPassword}
+              onChange={(e) => setCurrentPassword(e.target.value)}
+            />
+            <button 
+              type="button" 
+              onClick={() => setShowCurrentPassword(!showCurrentPassword)} 
+              className={styles.togglePasswordVisibility}
+            >
+              <FontAwesomeIcon icon={showCurrentPassword ? faEyeSlash : faEye} />
+            </button>
+          </div>
         </div>
         <div className={styles.form_group}>
           <label htmlFor="password">Nova Senha</label>
-          <input
-            type="password"
-            id="password"
-            value={newPassword}
-            onChange={(e) => setNewPassword(e.target.value)}
-          />
+          <div style={{ position: 'relative', width: '100%' }}>
+            <input
+              type={showNewPassword ? 'text' : 'password'}
+              id="password"
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+            />
+            <button 
+              type="button" 
+              onClick={() => setShowNewPassword(!showNewPassword)} 
+              className={styles.togglePasswordVisibility}
+            >
+              <FontAwesomeIcon icon={showNewPassword ? faEyeSlash : faEye} />
+            </button>
+          </div>
         </div>
         <div className={styles.form_group}>
           <label htmlFor="confirm-password">Confirmar Senha</label>
-          <input
-            type="password"
-            id="confirm-password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-          />
+          <div style={{ position: 'relative', width: '100%' }}>
+            <input
+              type={showConfirmPassword ? 'text' : 'password'}
+              id="confirm-password"
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
+            <button 
+              type="button" 
+              onClick={() => setShowConfirmPassword(!showConfirmPassword)} 
+              className={styles.togglePasswordVisibility}
+            >
+              <FontAwesomeIcon icon={showConfirmPassword ? faEyeSlash : faEye} />
+            </button>
+          </div>
         </div>
         <div>
           <Botao className={styles.botaoAlterarSenha} type="submit">Salvar</Botao>
