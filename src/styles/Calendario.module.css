@@ -13,11 +13,6 @@
   color: #f5f5f5;
 }
 
-/* .header h1{
-    text-align: center;
-    font-size: 28px;
-} */
-
 .days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -37,45 +32,52 @@
   color: #f5f5f5;
 }
 
-.date {
-  height: 70px;
+
+/*CALENDÁRIO GRANDE*/
+
+.grande{
+  width: 80%;
+  height: 65vh;
+
+  margin-bottom: 2%;
+}
+
+.grande .date{
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid #ddd;  */
   box-sizing: border-box;
 }
 
 .grande .today {
   background-color: rgb(62, 220, 234);
-  color: white;
-  font-size: 1rem;
-  padding: 5px;
-  border-radius: 0px;
+  color: var(--);
+
+  border-radius: 100%;
   margin: auto;
-  width: 70%;
-  height: 80%;
+
+  width: 42%;
+  height: 58%;
+
+  /* width: 38%;
+  height: 52%; */
 }
 
-.buttons {
-  width: 50px;
-  height: 50px;
+.grande .buttons{
+  width: 45px;
+  height: 45px;
 
   font-size: 15px;
   font-weight: bold;
 
   background-color: rgba(0, 105, 114, 0.5);
-  color: #f5f5f5;
+  color: var(--branco);
 
   border: none;
   border-radius: 100%;
 
   cursor: pointer;
-}
-
-.grande {
-  width: 615px;
-  height: 570px
 }
 
 
@@ -88,13 +90,24 @@
   font-size: 12px;
 }
 
-.pequeno .header h1 {
+.pequeno .header h2 {
   font-size: 16px;
 }
 
 .pequeno .buttons {
   width: 40px;
   height: 40px;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  background-color: rgba(0, 105, 114, 0.5);
+  color: var(--branco);
+
+  border: none;
+  border-radius: 100%;
+
+  cursor: pointer;
 }
 
 .pequeno .date {
@@ -113,6 +126,9 @@
   border-radius: 100%;
   margin: auto;
 
-  width: 50%;
-  height: 100%;
+  /* width: 50%;
+  height: 100%; */
+
+  width: 40%;
+  height:100%;
 }

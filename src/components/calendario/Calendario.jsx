@@ -62,7 +62,7 @@ export default function Calendario({tamanho}){
     <div className={`${styles.calendar} ${styles[tamanho]}`}>
     <div className={styles.header}>
         <button className={styles.buttons} onClick={handlePrevMonth} id="prev">&lt;</button>
-        <h1 ref={monthYearElementRef} id="monthYear"></h1>
+        <h2 ref={monthYearElementRef} id="monthYear"></h2>
         <button className={styles.buttons} onClick={handleNextMonth} id="next">&gt;</button>
     </div>
     <div className={styles.days}>
