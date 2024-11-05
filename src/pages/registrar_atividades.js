@@ -1,12 +1,13 @@
 import Menu from "@/components/menu/Menu";
-import CrudsUsuario from "@/components/cruds/CrudUsuario";
+import CrudAtividades from "@/components/cruds/CrudAtividades";
 
-export default function CrudUsuario() {
+export default function CrudsAtividades() {
+
     return (
         <>
             <Menu />
             <div className="container_tela">
-                <CrudsUsuario />
+                < CrudAtividades />
             </div>
         </>
     );

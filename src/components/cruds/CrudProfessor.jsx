@@ -1,83 +1,85 @@
 import { useState } from "react";
 import styles from "@/styles/Cruds.module.css";
-import { faUserGraduate, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faUserTie, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function CrudUsuario() {
-    const [usuarios, setUsuarios] = useState([
-        { id: 1, nome: "João Silva", email: "joao.silva@example.com", telefone: "123456789", turma: "1º ano" },
-        { id: 2, nome: "Maria Oliveira", email: "maria.oliveira@example.com", telefone: "987654321", turma: "2º ano" }
+export default function CrudProfessor() {
+    const [professores, setProfessores] = useState([
+        { id: 1, nome: "Carlos Silva", email: "carlos.silva@example.com", telefone: "123456789", disciplina: "História", turma: "1º ano" },
+        { id: 2, nome: "Ana Oliveira", email: "ana.oliveira@example.com", telefone: "987654321", disciplina: "Matemática", turma: "2º ano" }
     ]);
 
-    const [nomeResponsavel, setNomeResponsavel] = useState("");
+    const [nome, setNome] = useState("");
     const [email, setEmail] = useState("");
     const [telefone, setTelefone] = useState("");
     const [senha, setSenha] = useState("");
     const [confirmarSenha, setConfirmarSenha] = useState("");
+    const [disciplina, setDisciplina] = useState("");
     const [turma, setTurma] = useState("");
     const [editandoId, setEditandoId] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (nomeResponsavel.trim() === "" || email.trim() === "" || telefone.trim() === "" || senha !== confirmarSenha || turma.trim() === "") {
+        if (nome.trim() === "" || email.trim() === "" || telefone.trim() === "" || senha !== confirmarSenha || disciplina.trim() === "" || turma.trim() === "") {
             alert("Preencha todos os campos corretamente e confirme a senha.");
             return;
         }
 
         if (editandoId !== null) {
-            setUsuarios(usuarios.map(usuario =>
-                usuario.id === editandoId ? { ...usuario, nome: nomeResponsavel, email, telefone, turma } : usuario
+            setProfessores(professores.map(professor =>
+                professor.id === editandoId ? { ...professor, nome, email, telefone, disciplina, turma } : professor
             ));
-
             setEditandoId(null);
         } else {
-            const novoUsuario = {
-                id: usuarios.length + 1,
-                nome: nomeResponsavel,
+            const novoProfessor = {
+                id: professores.length + 1,
+                nome,
                 email,
                 telefone,
+                disciplina,
                 turma
             };
-
-            setUsuarios([...usuarios, novoUsuario]);
+            setProfessores([...professores, novoProfessor]);
         }
 
-        setNomeResponsavel("");
+        setNome("");
         setEmail("");
         setTelefone("");
         setSenha("");
         setConfirmarSenha("");
+        setDisciplina("");
         setTurma("");
     };
 
     const handleEdit = (id) => {
-        const usuario = usuarios.find(u => u.id === id);
-        setNomeResponsavel(usuario.nome);
-        setEmail(usuario.email);
-        setTelefone(usuario.telefone);
-        setTurma(usuario.turma);
+        const professor = professores.find((p) => p.id === id);
+        setNome(professor.nome);
+        setEmail(professor.email);
+        setTelefone(professor.telefone);
+        setDisciplina(professor.disciplina);
+        setTurma(professor.turma);
         setEditandoId(id);
     };
 
     const handleDelete = (id) => {
-        setUsuarios(usuarios.filter(usuario => usuario.id !== id));
+        setProfessores(professores.filter((professor) => professor.id !== id));
     };
 
     return (
         <div className={styles.containerCruds}>
             <div className={styles.containerForm}>
-                <FontAwesomeIcon icon={faUserGraduate} className={styles.iconForms} />
+                <FontAwesomeIcon icon={faUserTie} className={styles.iconForms} />
                 <form onSubmit={handleSubmit}>
                     <div className={styles.formHeader}>
-                        <h1>{editandoId !== null ? "Editar Usuário" : "Registrar Usuário"}</h1>
+                        <h1>{editandoId !== null ? "Editar Professor" : "Registrar Professor"}</h1>
                     </div>
                     <div className={styles.formGroup}>
-                        <label htmlFor="nomeResponsavel">Nome Responsável</label>
+                        <label htmlFor="nomeProf">Nome</label>
                         <input
                             type="text"
-                            id="nomeResponsavel"
-                            value={nomeResponsavel}
-                            onChange={(e) => setNomeResponsavel(e.target.value)}
+                            id="nomeProf"
+                            value={nome}
+                            onChange={(e) => setNome(e.target.value)}
                             required
                         />
                     </div>
@@ -122,6 +124,20 @@ export default function CrudUsuario() {
                         />
                     </div>
                     <div className={styles.formGroup}>
+                        <label htmlFor="disciplina">Disciplina</label>
+                        <select
+                            id="disciplina"
+                            value={disciplina}
+                            onChange={(e) => setDisciplina(e.target.value)}
+                            required
+                        >
+                            <option value="">Selecione</option>
+                            <option value="História">História</option>
+                            <option value="Geografia">Geografia</option>
+                            <option value="Matemática">Matemática</option>
+                        </select>
+                    </div>
+                    <div className={styles.formGroup}>
                         <label htmlFor="turma">Turma</label>
                         <select
                             id="turma"
@@ -141,21 +157,22 @@ export default function CrudUsuario() {
                 </form>
             </div>
             <div className={styles.containerList}>
-                <h1>Lista de Usuários</h1>
+                <h1>Lista de Professores</h1>
                 <ul className={styles.listaList}>
-                    {usuarios.map((usuario) => (
-                        <li key={usuario.id} className={styles.listaItem}>
+                    {professores.map((professor) => (
+                        <li key={professor.id} className={styles.listaItem}>
                             <div>
-                                <strong>Nome:</strong> {usuario.nome} <br />
-                                <strong>Email:</strong> {usuario.email} <br />
-                                <strong>Telefone:</strong> {usuario.telefone} <br />
-                                <strong>Turma:</strong> {usuario.turma}
+                                <strong>Nome:</strong> {professor.nome} <br />
+                                <strong>Email:</strong> {professor.email} <br />
+                                <strong>Telefone:</strong> {professor.telefone} <br />
+                                <strong>Disciplina:</strong> {professor.disciplina} <br />
+                                <strong>Turma:</strong> {professor.turma}
                             </div>
                             <div className={styles.actionButtons}>
-                                <button onClick={() => handleEdit(usuario.id)} className={styles.editButton}>
+                                <button onClick={() => handleEdit(professor.id)} className={styles.editButton}>
                                     <FontAwesomeIcon icon={faEdit} />
                                 </button>
-                                <button onClick={() => handleDelete(usuario.id)} className={styles.deleteButton}>
+                                <button onClick={() => handleDelete(professor.id)} className={styles.deleteButton}>
                                     <FontAwesomeIcon icon={faTrash} />
                                 </button>
                             </div>

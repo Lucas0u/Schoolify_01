@@ -1,13 +1,12 @@
-import CrudDisciplina from "@/components/cruds/CrudDisciplina";
+import CrudEventos from "@/components/cruds/CrudEventos";
 import Menu from "@/components/menu/Menu";
 
-export default function Disciplinas() {
-
+export default function Eventos() {
   return (
     <>
       <Menu />
       <div className="container_tela"	>
-        <CrudDisciplina />
+        <CrudEventos />
       </div>
     </>
   );
