@@ -1,9 +1,12 @@
 import AddComentarios from "@/components/atividades/AddComentario";
 import AtvAberta from "@/components/atividades/AtvAberta";
+import ListaComentarios from "@/components/atividades/ListaComentarios";
 import Menu from "@/components/menu/Menu";
 import styles from '@/styles/Atividade.module.css';
 import { useRouter } from 'next/router';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import axios from 'axios';
+
 
 export default function AtividadeAbertas() {
   const router = useRouter();
@@ -58,6 +61,29 @@ export default function AtividadeAbertas() {
     router.push("/atividades");
   };
 
+  const [comentarios, setComentarios] = useState([]);
+
+  const fetchComentarios = async () => {
+    try{
+      const response = await axios.get("/comentarios");
+      setComentarios(response.data.content);
+    } catch (error){
+      console.error("Erro ao buscar comentários", error);
+    }
+  };
+
+  useEffect( () => {
+    fetchComentarios();
+  }, []);
+
+  const handleAddComentario = async (novoComentarioTexto) => {
+    try{
+      const response = await axios.post("/comentarios", {texto: novoComentarioTexto});
+    } catch (error){
+      console.error("Erro ao adicionar comentário", error);
+    }
+  };
+
   return (
     <>
       <Menu />
@@ -72,7 +98,8 @@ export default function AtividadeAbertas() {
             onBack={handleBack}
           />
         </div>
-        <AddComentarios/>
+        <AddComentarios onAddComentario={handleAddComentario}/>
+        <ListaComentarios comentarios={comentarios}/>
       </div>
     </>
   );

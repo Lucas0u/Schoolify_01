@@ -234,18 +234,20 @@
 .containerComentario h2{
   text-align: center;
 
-  padding-top: 20px;
+  padding: 20px 0px 15px 0px;
 }
 
-.containerForm form{
+
+.containerForm .containerComentario{
   width: 100%;
   height: 50%;
+
+  margin: 0;
 
   display: flex;
   justify-content: center;
   align-items:center;
 
-  padding: 20px 0px 20px 0px;
 }
 
 .containerForm textarea{
